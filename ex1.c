@@ -32,8 +32,8 @@ int main() {
   res = mask << position;
   res2 = num1 | res;
   res3 = num1 & ~res;
-  printf("Number with bit %d set to 1 is: %d\n",position, res2);
-  printf("Number with bit %d set to 0 is: %d\n",position, res3);
+  printf("Number with bit %d set to 1: %d\n",position, res2);
+  printf("Number with bit %d set to 0: %d\n",position, res3);
 
 
   /*Scan two integers (representing number and a position)
