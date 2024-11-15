@@ -59,7 +59,7 @@ int main() {
   printf("\nEven - Odd:\n");
   printf("Please enter a number: \n");
   scanf("%i", &num1);
-  res = mask & num1;
+  res = mask & ~num1;
   printf("%d\n", res);
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
