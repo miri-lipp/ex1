@@ -30,7 +30,7 @@ int main() {
   scanf("%i", &position);
   res = 1 << position;
   res2 = num1 | res;
-  res3 = num1 ^ res;
+  res3 = num1 & ~res;
   printf("Number with bit %d set to 1 is: %d\n",position, res2);
   printf("Number with bit %d set to 0 is: %d\n",position, res3);
 
@@ -58,13 +58,21 @@ int main() {
   printf("\nEven - Odd:\n");
   printf("Please enter a number: \n");
   scanf("%i", &num1);
-  res = num1 ^ 1;
+  res = 1 & num1;
   printf("%d\n", res);
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
   
   // 3, 5, 7, 11
- // printf("\n3, 5, 7, 11:\n");
+  printf("\n3, 5, 7, 11:\n");
+  printf("Please enter the first number (octal): \n");
+  scanf("%o", &num1);
+  printf("Please enter the second number (octal): \n");
+  scanf("%o", &num2);
+  res = (num1 ^ num2) << 1;
+  printf("The sum in hexadecimal: %X\n", res);
+  answer = (((res >> 3 & 1) >> 2 & 1) >> 2 & 1) >> 3 & 1;
+  printf("The 3,5,7,11 bits are: %d\n", answer);
   /* Scan two integers in octal base
   sum them up and print the result in hexadecimal base
   Print only 4 bits, in positions: 3,5,7,11 in the result. */
